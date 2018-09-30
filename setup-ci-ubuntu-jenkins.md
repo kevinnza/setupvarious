@@ -34,39 +34,18 @@ Install the nvm setup script:
 $ bash install_nvm.sh
 ````
 
-It will install the software into a subdirectory of your home directory at ~/.nvm. It will also add the necessary lines to your ~/.profile file to use the file.
-
-To gain access to the nvm functionality, you'll need to either log out and log back in again or source the ~/.profile file so that your current session knows about the changes:
-
+To access nvm functionality, either log out and log back in again or source the ~/.profile file so that your current session knows about the changes:
+    
     source ~/.profile
 
-With nvm installed, you can install isolated Node.js versions. For information about the versions of Node.js that are available, type:
+With nvm installed, you can install isolated Node.js versions. For information about the versions of Node.js that are available, run:
 
     nvm ls-remote
 
-Output
-...
-         v8.11.1   (Latest LTS: Carbon)
-         v9.0.0
-         v9.1.0
-         v9.2.0
-         v9.2.1
-         v9.3.0
-         v9.4.0
-         v9.5.0
-         v9.6.0
-         v9.6.1
-         v9.7.0
-         v9.7.1
-         v9.8.0
-         v9.9.0
-        v9.10.0
-        v9.10.1
-        v9.11.0
-        v9.11.1
-        v10.0.0  
+A list of node version will display. Make a note of the current LTS version eg. 8.12.0
 
-As you can see, the current LTS version at the time of this writing is v8.11.1. You can install that by typing:
+Install that version by running `$ nvm install \[version\]` eg: `$ nvm install 8.12.0`
+
 
 ## Angular CLI
 
