@@ -118,7 +118,15 @@ Make a folder called Android/Sdk in the home directory
 Then unzip it into the Android/Sdk folder:
 
     $ unzip [filename].zip -d $HOME/Android/Sdk
+
+Change the current directory to where sdkmanager is located:
+
+    $ cd $HOME/Android/Sdk/tools/bin
     
+Download sdk for version 23:
+
+    $ ./sdkmanager "platforms;android-23"
+
 
 ## Additional setup steps
 
