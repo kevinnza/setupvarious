@@ -18,7 +18,7 @@ $ git config --global user.email "youremail@address.here"
 
 ## Node.js
 
-We'll install Node.js using `nvm` instead of using `apt`. This will ensure we can install the versionf of Node.js that we need.
+We'll install Node.js using `nvm` instead of using `apt`. This will ensure we can install the version of Node.js that we need.
 Sometimes installing an older version will not work well with other components required for builds, etc. eg. Angular CLI.
 
 Download the nvm installation script from the project's GitHub page.
@@ -123,10 +123,22 @@ Change the current directory to where sdkmanager is located:
 
     $ cd $HOME/Android/Sdk/tools/bin
     
-Download sdk for version 23:
+Download sdk for version 23 (we can download others later if we want):
 
     $ ./sdkmanager "platforms;android-23"
 
+Set `ANDROID_HOME`:
+
+1. Edit `bashrc`
+````
+    nano $HOME/.bashrc
+````    
+2. Add these lines
+````
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+````
+    
 
 ## Additional setup steps
 
