@@ -89,7 +89,7 @@ After installation if you have multiple installations of java you can choose whi
 
 Set the JAVA_HOME system environment variable.
 
-    $ export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
+    $ echo JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
 
 
 ## Android SDK
