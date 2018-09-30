@@ -4,10 +4,10 @@ Here we describe how to set up Ubuntu 18.04 for CI using Jenkins
 
 ## git
 
-`
+````
 $ sudo apt update
 $ sudo apt install git
-`
+````
 
 ## nodeJS
 
