@@ -36,11 +36,11 @@ $ bash install_nvm.sh
 
 To access nvm functionality, either log out and log back in again or source the ~/.profile file so that your current session knows about the changes:
     
-    source ~/.profile
+    $ source ~/.profile
 
 With nvm installed, you can install isolated Node.js versions. For information about the versions of Node.js that are available, run:
 
-    nvm ls-remote
+    $ nvm ls-remote
 
 A list of node version will display. Make a note of the current LTS version eg. 8.12.0
 
@@ -49,7 +49,7 @@ Install that version by running `$ nvm install [version]` eg: `$ nvm install 8.1
 
 ## Angular CLI
 
-Install thee Angular cli
+Install the Angular cli
 
     $ npm install -g @angular/cli
 
@@ -63,7 +63,7 @@ At time of writing we follow the (.NET Core install instructions)[https://docs.m
 Get the install script:
 
 ````
-    curl -sL https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh
+    $ curl -sL https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh
 ````    
 
 ## Java
