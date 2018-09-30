@@ -52,7 +52,7 @@ Ensure that node and npm can be run with sudo (we'll need this for NativeScript 
 ````
     whereis node
 ````
-2. Create symbolic link to for /usr/bin/node
+2. Create symbolic link for /usr/bin/node
 ````
     sudo ln -s [path from previous step] /usr/bin/node    
 ````    
@@ -60,7 +60,7 @@ Ensure that node and npm can be run with sudo (we'll need this for NativeScript 
 ````
     whereis npm
 ````
-2. Create symbolic link to for /usr/bin/npm
+4. Create symbolic link for /usr/bin/npm
 ````
     sudo ln -s [path from previous step] /usr/bin/npm
 ````
