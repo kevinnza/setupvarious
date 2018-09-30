@@ -108,6 +108,11 @@ $ echo $JAVA_HOME
 
 ## Android SDK
 
+    $ sudo apt update
+    
+    $ wget https://developer.android.com/studio/#downloads
+    
+    
 
 ## Additional setup steps
 
