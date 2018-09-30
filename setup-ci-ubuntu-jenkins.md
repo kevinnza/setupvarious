@@ -143,8 +143,7 @@ Change the current directory to where sdkmanager is located:
     
 Download sdk for version 23 (we can download others later if we want):
 
-    $ ./sdkmanager "platform-tools" "platforms;android-23"
-
+    $ sudo $ANDROID_HOME/tools/bin/sdkmanager "tools" "emulator" "platform-tools" "platforms;android-25" "build-tools;27.0.3" "extras;android;m2repository" "extras;google;m2repository"
 
 Set `ANDROID_HOME`:
 
