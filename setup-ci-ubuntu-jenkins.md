@@ -87,9 +87,17 @@ After installation if you have multiple installations of java you can choose whi
 
     $ sudo update-alternatives --config java
 
-Set the JAVA_HOME system environment variable.
+Set JAVA_HOME system environment variable:
 
-    $ echo JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
+1. Determine the text we will use to add to environment by echoing the key value pair which has the path in it
+
+````
+$ echo JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
+```` 
+2. Open /etc/environment in nano and add the result of previous command (step 1)
+````
+$ sudo nano /etc/environment
+````
 
 
 ## Android SDK
