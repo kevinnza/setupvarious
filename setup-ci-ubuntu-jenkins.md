@@ -58,13 +58,18 @@ Install the Angular cli
 
 ## .NET Core
 
-At time of writing we follow the (.NET Core install instructions)[https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites?tabs=netcore2x] - if there are issues with the following then refer to the Microsoft .NET Core install instructions for any changes.
+At time of writing we follow the [.NET Core install instructions](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites?tabs=netcore2x) - if there are issues with the following then refer to the Microsoft .NET Core install instructions for any changes.
 
 Get the install script:
 
 ````
-    $ curl -sL https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh
+$ curl -sL https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh
 ````    
+
+Run the install script:
+````
+$ ./dotnet-install.sh -c Current
+````
 
 ## Java
 
