@@ -76,6 +76,10 @@ Run the install script:
 $ ./dotnet-install.sh -c Current
 ````
 
+To access dotnet cli functionality, either log out and log back in again or source the ~/.profile file so that your current session knows about the changes:
+    
+    $ source ~/.profile
+
 ## Java
 
 
