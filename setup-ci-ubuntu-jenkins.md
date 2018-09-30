@@ -58,27 +58,13 @@ Install the Angular cli
 
 ## .NET Core
 
-At time of writing we follow the [.NET Core install instructions](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites?tabs=netcore2x) - if there are issues with the following then refer to the Microsoft .NET Core install instructions for any changes.
+At time of writing we follow the [.NET Core install instructions](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites?tabs=netcore2x) - if there are issues with the following then refer to the [Microsoft .NET Core install instructions](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script) for any changes.
 
 Get the install script:
 
 ````
-$ curl -sL https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh
-````    
-
-Set execute permission:
+$ curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin -c Current
 ````
-$ sudo chmod +x dotnet-install.sh
-````
-
-Run the install script:
-````
-$ ./dotnet-install.sh -c Current
-````
-
-To access dotnet cli functionality, either log out and log back in again or source the ~/.profile file so that your current session knows about the changes:
-    
-    $ source ~/.profile
 
 ## Java
 
