@@ -108,11 +108,15 @@ $ echo $JAVA_HOME
 
 ## Android SDK
 
-Go to https://developer.android.com/studio/#downloads and go to the "Command Line Tools only" section and locate the SDK tools package for Linux and download the file.
+Go to https://developer.android.com/studio/#downloads and go to the "Command Line Tools only" section and locate the SDK tools package for Linux and download the file. It should be a zip file.
 
-Then unzip it:
+Make a folder called Android/Sdk in the home directory
+    
+    $ mkdir $HOME/Android/Sdk
 
-    $ unzip [filename].zip        
+Then unzip it into the Android/Sdk folder:
+
+    $ unzip [filename].zip -d $HOME/Android/Sdk
     
 
 ## Additional setup steps
