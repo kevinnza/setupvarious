@@ -19,6 +19,9 @@ $ sudo apt install git
 ## Typescript?
 
 
+## .NET Core
+
+
 ## Java
 
 
