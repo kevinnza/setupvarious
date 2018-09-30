@@ -23,7 +23,7 @@ Sometimes installing an older version will not work well with other components r
 
 Download the nvm installation script from the project's GitHub page.
 
-````bash
+````shell
 $ curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh -o install_nvm.sh
 ````
 
