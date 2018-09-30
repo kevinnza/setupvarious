@@ -29,6 +29,9 @@ $ curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh 
 
 Note: If curl is not installed then install it with `$ sudo apt install curl`
 
+Install the nvm setup script:
+    $ bash install_nvm.sh
+
 It will install the software into a subdirectory of your home directory at ~/.nvm. It will also add the necessary lines to your ~/.profile file to use the file.
 
 To gain access to the nvm functionality, you'll need to either log out and log back in again or source the ~/.profile file so that your current session knows about the changes:
