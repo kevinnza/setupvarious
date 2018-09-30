@@ -67,6 +67,8 @@ $ sudo apt-get update
 $ sudo apt-get install dotnet-sdk-2.1
 ````
 
+Note: These instructions are from the Microsoft [site](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-current). If these don't work due to them changing it then please refer to the site and locate the instruction for Ubuntu 18.04
+
 ## Java
 
 
