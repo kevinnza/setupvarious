@@ -137,13 +137,6 @@ Then unzip it into the Android/Sdk folder:
 
     $ unzip [filename].zip -d $HOME/Android/Sdk
 
-Change the current directory to where sdkmanager is located:
-
-    $ cd $HOME/Android/Sdk/tools/bin
-    
-Download sdk for version 23 (we can download others later if we want):
-
-    $ sudo $ANDROID_HOME/tools/bin/sdkmanager "tools" "emulator" "platform-tools" "platforms;android-25" "build-tools;27.0.3" "extras;android;m2repository" "extras;google;m2repository"
 
 Set `ANDROID_HOME`:
 
@@ -156,6 +149,12 @@ Set `ANDROID_HOME`:
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 ````
+
+
+Download android sdks required for NativeScript:
+
+    $ sudo $ANDROID_HOME/tools/bin/sdkmanager "tools" "emulator" "platform-tools" "platforms;android-25" "build-tools;27.0.3" "extras;android;m2repository" "extras;google;m2repository"
+
 
 
 ## Additional setup steps
