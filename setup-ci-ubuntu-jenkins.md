@@ -125,7 +125,8 @@ Change the current directory to where sdkmanager is located:
     
 Download sdk for version 23 (we can download others later if we want):
 
-    $ ./sdkmanager "platforms;android-23"
+    $ ./sdkmanager "platform-tools" "platforms;android-23"
+
 
 Set `ANDROID_HOME`:
 
