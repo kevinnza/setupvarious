@@ -165,9 +165,18 @@ $ sudo apt-get install g++
 
 To use [NativeScript](https://www.nativescript.org) for native mobile development.
 
-Follow instructions at [NativeScript](https://docs.nativescript.org/start/ns-setup-linux) to set up for linux
+Note: Adapted from set up instructions for Linux at [NativeScript](https://docs.nativescript.org/start/ns-setup-linux)
 
-Run `tns doctor` to see if everything is correctly installed for NativeScript
+Install nativescript
+````
+$ sudo npm install nativescript -g --unsafe-perm
+````
+
+Close terminal and open again and then to check if everything is set up correctly
+````
+$ tns doctor
+````
+
 
 ## Jenkins
 
