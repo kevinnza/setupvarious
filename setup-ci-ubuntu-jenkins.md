@@ -108,10 +108,11 @@ $ echo $JAVA_HOME
 
 ## Android SDK
 
-    $ sudo apt update
-    
-    $ wget https://developer.android.com/studio/#downloads
-    
+Go to https://developer.android.com/studio/#downloads and go to the "Command Line Tools only" section and locate the SDK tools package for Linux and download the file.
+
+Then unzip it:
+
+    $ unzip [filename].zip        
     
 
 ## Additional setup steps
