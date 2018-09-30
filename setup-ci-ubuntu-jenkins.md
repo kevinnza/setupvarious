@@ -44,7 +44,7 @@ With nvm installed, you can install isolated Node.js versions. For information a
 
 A list of node version will display. Make a note of the current LTS version eg. 8.12.0
 
-Install that version by running `$ nvm install \[version\]` eg: `$ nvm install 8.12.0`
+Install that version by running `$ nvm install [version]` eg: `$ nvm install 8.12.0`
 
 
 ## Angular CLI
