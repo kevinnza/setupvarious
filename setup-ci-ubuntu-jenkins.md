@@ -46,6 +46,24 @@ A list of node version will display. Make a note of the current LTS version eg. 
 
 Install that version by running `$ nvm install [version]` eg: `$ nvm install 8.12.0`
 
+Ensure that node and npm can be run with sudo (we'll need this for NativeScript install later)
+
+1. Check where node is installed
+````
+    whereis node
+````
+2. Create symbolic link to for /usr/bin/node
+````
+    sudo ln -s [path from previous step] /usr/bin/node    
+````    
+3. Check where npm is installed
+````
+    whereis npm
+````
+2. Create symbolic link to for /usr/bin/npm
+````
+    sudo ln -s [path from previous step] /usr/bin/npm
+````
 
 ## Angular CLI
 
@@ -139,7 +157,7 @@ Set `ANDROID_HOME`:
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 ````
-    
+
 
 ## Additional setup steps
 
