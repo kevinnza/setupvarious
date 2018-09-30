@@ -73,15 +73,53 @@ Note: These instructions are from the Microsoft [site](https://www.microsoft.com
 
 ## Java
 
+Install JDK 8. We install this version as NativeScript supports this version at time of writing.
+Adapted [from](https://docs.nativescript.org/start/ns-setup-linux) to set up for linux
+
+````
+$ sudo apt-get install python-software-properties
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo apt-get update
+$ sudo apt-get install oracle-java8-installer
+````
+
+After installation if you have multiple installations of java you can choose which to use:
+
+    $ sudo update-alternatives --config java
+
+Set the JAVA_HOME system environment variable.
+
+    $ export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
 
 
 ## Android SDK
 
 
+## Additional setup steps
+
+These are required to set up for NativeScript development - there may be some overlap with other steps
+Adapted [from](https://docs.nativescript.org/start/ns-setup-linux) to set up for linux
+
+````
+$ sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0 libstdc++6:i386
+````
+
+If you encounter an error showing "Unable to locate package lib32bz2-1.0" then use
+````
+$ sudo apt-get install lib32z1 lib32ncurses5 libbz2-1.0:i386 libstdc++6:i386
+````
+
+Install g++ compiler
+````
+$ sudo apt-get install g++
+````
+
 
 ## NativeScript
 
 To use [NativeScript](https://www.nativescript.org) for native mobile development.
+
+Follow instructions at [NativeScript](https://docs.nativescript.org/start/ns-setup-linux) to set up for linux
 
 Run `tns doctor` to see if everything is correctly installed for NativeScript
 
