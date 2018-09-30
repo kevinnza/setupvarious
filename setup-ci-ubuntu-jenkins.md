@@ -66,6 +66,11 @@ Get the install script:
 $ curl -sL https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh
 ````    
 
+Set execute permission:
+````
+$ sudo chmod +x dotnet-install.sh
+````
+
 Run the install script:
 ````
 $ ./dotnet-install.sh -c Current
