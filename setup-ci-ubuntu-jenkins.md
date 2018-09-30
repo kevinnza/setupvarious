@@ -77,7 +77,7 @@ Install JDK 8. We install this version as NativeScript supports this version at 
 Adapted [from](https://docs.nativescript.org/start/ns-setup-linux) to set up for linux
 
 ````
-$ sudo apt-get install python-software-properties
+$ sudo apt-get install software-properties-common
 $ sudo add-apt-repository ppa:webupd8team/java
 $ sudo apt-get update
 $ sudo apt-get install oracle-java8-installer
