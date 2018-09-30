@@ -90,7 +90,6 @@ After installation if you have multiple installations of java you can choose whi
 Set JAVA_HOME system environment variable:
 
 1. Determine the text we will use to add to environment by echoing the key value pair which has the path in it
-
 ````
 $ echo JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
 ```` 
@@ -98,7 +97,14 @@ $ echo JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\
 ````
 $ sudo nano /etc/environment
 ````
-
+3. Run source for current session to recognize JAVA_HOME
+````
+$ source /etc/environment
+````
+4. Display JAVA_HOME to ensure it's set
+````
+$ echo $JAVA_HOME
+````
 
 ## Android SDK
 
