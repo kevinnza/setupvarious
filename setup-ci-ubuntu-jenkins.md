@@ -142,28 +142,12 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 ````
 
-Set `ANDROID_HOME`:
+Set `ANDROID_HOME` system environment variables by creating a new .sh file in /etc/profile.d:
 
 See: https://help.ubuntu.com/community/EnvironmentVariables (System Wide Environment Variables)
-
-1. Display the install location of Android Sdk
 ````
-    echo $HOME/Android/Sdk
+    sudo bash -c "echo -e \"export ANDROID_HOME=$HOME/Android/Sdk\nexport PATH=$PATH:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/platform-tools \" > /etc/profile.d/android-sdk-path.sh"
 ````    
-2. Create a new file in /etc/profile.d
-````
-    sudo bash -c "echo -e \"export ANDROID_HOME=$HOME/Android/Sdk \n  export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools \" > /etc/profile.d/android-sdk-path.sh"
-````    
-3. Edit the file
-````
-    sudo nano /etc/profile.d/androidsdk.sh
-````    
-4. Add these lines
-````
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-````
-
 
 Download android sdks required for NativeScript:
 
