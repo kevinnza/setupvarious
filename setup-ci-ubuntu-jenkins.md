@@ -26,22 +26,17 @@ $ git config --global user.email "youremail@address.here"
 We'll install Node.js using PPA from NodeSource. We'll use this to install a more precise version of node instead of using the default Ubuntu PPAs. Some modules like Angular CLI require a specific version or later and the default version from Ubuntu apt install may be older that what's needed. 
 
 ````
-IGNORE  $ cd ~
-IGNORE  $ curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
-IGNORE  $ sudo bash nodesource_setup.sh
-IGNORE  $ sudo apt install nodejs
-IGNORE  $ sudo apt install build-essential
-
-
 $ cd ~
+$ curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
+$ sudo bash nodesource_setup.sh
+$ sudo apt install nodejs
+$ sudo apt install build-essential
 
+IGNORE
+$ cd ~
 $ sudo apt-get install curl software-properties-common
-
-# NOTE: If you get errors on this one, then restart the OS and try again
 $ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-
 $ sudo apt-get install -y nodejs
-
 $ sudo apt install build-essential
 ````
 
