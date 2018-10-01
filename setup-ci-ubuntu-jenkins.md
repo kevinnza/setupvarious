@@ -112,6 +112,7 @@ After installation if you have multiple installations of java you can choose whi
 
     $ sudo update-alternatives --config java
 
+<IGNORE>
 Set JAVA_HOME system environment variable:
 
 1. Determine the text we will use to add to environment by echoing the key value pair which has the path in it
@@ -124,6 +125,9 @@ $ export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.
 ````
 $ echo $JAVA_HOME
 ````
+</IGNORE>
+
+Log out and back in for the JAVA_HOME environment variable to take effect. The install should have set this variable.
 
 ## Android SDK
 
