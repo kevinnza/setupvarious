@@ -2,10 +2,6 @@
 
 Here we describe how to set up Ubuntu 18.04 for CI using Jenkins
 
-NOTE: If you get errors when doing apt update OR apt-get update then try adding this to the command as temporaror workaround:
-
-      -o Acquire::Check-Valid-Until=false  
-      eg: sudo apt-get -o Acquire::Check-Valid-Until=false update
 
 ## git
 
