@@ -28,12 +28,12 @@ $ sudo bash nodesource_setup.sh
 $ sudo apt install nodejs
 $ sudo apt install build-essential
 
-IGNORE
-$ cd ~
-$ sudo apt-get install curl software-properties-common
-$ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-$ sudo apt-get install -y nodejs
-$ sudo apt install build-essential
+
+IGNORE  $ cd ~
+IGNORE  $ sudo apt-get install curl software-properties-common
+IGNORE  $ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+IGNORE  $ sudo apt-get install -y nodejs
+IGNORE  $ sudo apt install build-essential
 ````
 
 Note: If curl is not installed then install it with `$ sudo apt install curl`
