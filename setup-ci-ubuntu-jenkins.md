@@ -130,13 +130,35 @@ Then unzip it into the Android/Sdk folder:
     $ unzip [filename].zip -d $HOME/Android/Sdk
 
 
-Set `ANDROID_HOME`:
+Set `ANDROID_HOME` (Ignore):
 
 1. Edit `bashrc`
 ````
     nano $HOME/.bashrc
 ````    
 2. Add these lines
+````
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+````
+
+Set `ANDROID_HOME`:
+
+See: https://help.ubuntu.com/community/EnvironmentVariables (System Wide Environment Variables)
+
+1. Display the install location of Android Sdk
+````
+    echo $HOME/Android/Sdk
+````    
+2. Create a new file in /etc/profile.d
+````
+    sudo bash -c "echo -e \"export ANDROID_HOME=$HOME/Android/Sdk \n  export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools \" > /etc/profile.d/android-sdk-path.sh"
+````    
+3. Edit the file
+````
+    sudo nano /etc/profile.d/androidsdk.sh
+````    
+4. Add these lines
 ````
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
