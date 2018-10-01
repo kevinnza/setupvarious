@@ -108,17 +108,11 @@ Set JAVA_HOME system environment variable:
 
 1. Determine the text we will use to add to environment by echoing the key value pair which has the path in it
 ````
-$ echo JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
+$ export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
 ```` 
-2. Open /etc/environment in nano and add the result of previous command (step 1)
-````
-$ sudo nano /etc/environment
-````
-3. Run source for current session to recognize JAVA_HOME
-````
-$ source /etc/environment
-````
-4. Display JAVA_HOME to ensure it's set
+2. Log out and back in for the environment variable to take effect
+
+3. Display JAVA_HOME to ensure it's set
 ````
 $ echo $JAVA_HOME
 ````
