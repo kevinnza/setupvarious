@@ -123,8 +123,7 @@ Go to https://developer.android.com/studio/#downloads and go to the "Command Lin
 
 Make a folder called Android/Sdk in the home directory
     
-    $ mkdir $HOME/Android
-    $ mkdir $HOME/Android/Sdk
+    $ mkdir $HOME/Android && mkdir $HOME/Android/Sdk
 
 Then unzip it into the Android/Sdk folder:
 
