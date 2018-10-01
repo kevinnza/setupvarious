@@ -22,9 +22,9 @@ We'll install Node.js using PPA from NodeSource. We'll use this to install a mor
 
 ````
 $ cd ~
-$ curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
-$ sudo bash nodesource_setup.sh
-$ sudo apt install nodejs
+$ sudo apt-get install curl software-properties-common
+$ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+$ sudo apt-get install -y nodejs
 $ sudo apt install build-essential
 ````
 
