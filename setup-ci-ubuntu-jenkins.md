@@ -149,6 +149,8 @@ See: https://help.ubuntu.com/community/EnvironmentVariables (System Wide Environ
     sudo bash -c "echo -e \"export ANDROID_HOME=$HOME/Android/Sdk\nexport PATH=$PATH:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/platform-tools \" > /etc/profile.d/android-sdk-path.sh"
 ````    
 
+Log out and log back in for the environment variables to take effect
+
 Download android sdks required for NativeScript:
 
     $ sudo $ANDROID_HOME/tools/bin/sdkmanager "tools" "emulator" "platform-tools" "platforms;android-25" "build-tools;27.0.3" "extras;android;m2repository" "extras;google;m2repository"
