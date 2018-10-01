@@ -108,26 +108,8 @@ $ sudo apt-get update
 $ sudo apt-get install oracle-java8-installer
 ````
 
-After installation if you have multiple installations of java you can choose which to use:
-
-    $ sudo update-alternatives --config java
-
-BEGIN IGNORE
-Set JAVA_HOME system environment variable:
-
-1. Determine the text we will use to add to environment by echoing the key value pair which has the path in it
-````
-$ export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
-```` 
-2. Log out and back in for the environment variable to take effect
-
-3. Display JAVA_HOME to ensure it's set
-````
-$ echo $JAVA_HOME
-````
-END IGNORE
-
 Log out and back in for the JAVA_HOME environment variable to take effect. The install should have set this variable.
+
 
 ## Android SDK
 
@@ -140,19 +122,6 @@ Make a folder called Android/Sdk in the home directory
 Then unzip it into the Android/Sdk folder:
 
     $ unzip [filename].zip -d $HOME/Android/Sdk
-
-
-Set `ANDROID_HOME` (Ignore):
-
-1. Edit `bashrc`
-````
-$ nano $HOME/.bashrc
-````    
-2. Add these lines
-````
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-````
 
 Set `ANDROID_HOME` system environment variables by creating a new .sh file in /etc/profile.d:
 
