@@ -185,8 +185,9 @@ Note: Adapted from set up instructions for Linux at [NativeScript](https://docs.
 
 Install nativescript
 ````
-$ sudo npm install nativescript -g --unsafe-perm
+$ npm install nativescript -g --unsafe-perm
 ````
+Note: At time of writing the NativeScript docs indicate using `sudo npm` for the install but after research and because we are using nvm as a node version manager, we should use it without sudo. This is more secure.
 
 Close terminal and open again and then to check if everything is set up correctly
 ````
