@@ -22,9 +22,14 @@ We'll install Node.js using PPA from NodeSource. We'll use this to install a mor
 
 ````
 $ cd ~
+
 $ sudo apt-get install curl software-properties-common
+
+# NOTE: If you get errors on this one, then restart the OS and try again
 $ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+
 $ sudo apt-get install -y nodejs
+
 $ sudo apt install build-essential
 ````
 
