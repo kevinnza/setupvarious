@@ -67,6 +67,8 @@ Install that version by running `$ nvm install [version]` eg: `$ nvm install 8.1
 Install the Angular cli
 
     $ npm install -g @angular/cli
+    
+Note: might have to use sudo if permission errors    
 
 ## Typescript?
 
