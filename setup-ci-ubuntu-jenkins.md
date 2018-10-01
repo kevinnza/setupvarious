@@ -134,7 +134,7 @@ Set `ANDROID_HOME` (Ignore):
 
 1. Edit `bashrc`
 ````
-    nano $HOME/.bashrc
+$ nano $HOME/.bashrc
 ````    
 2. Add these lines
 ````
@@ -146,7 +146,7 @@ Set `ANDROID_HOME` system environment variables by creating a new .sh file in /e
 
 See: https://help.ubuntu.com/community/EnvironmentVariables (System Wide Environment Variables)
 ````
-    sudo bash -c "echo -e \"export ANDROID_HOME=$HOME/Android/Sdk\nexport PATH=$PATH:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/platform-tools \" > /etc/profile.d/android-sdk-path.sh"
+    $ sudo bash -c "echo -e \"export ANDROID_HOME=$HOME/Android/Sdk\nexport PATH=$PATH:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/platform-tools \" > /etc/profile.d/android-sdk-path.sh"
 ````    
 
 Log out and log back in for the environment variables to take effect
@@ -196,4 +196,44 @@ $ tns doctor
 
 
 ## Jenkins
+
+See: https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-18-04
+
+Install Jenkins
+````
+$ wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+$ sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+$ sudo apt update
+$ sudo apt install jenkins
+````
+
+Start Jenkins
+````
+$ sudo systemctl start jenkins
+````
+
+Open Firewall
+````
+$ sudo ufw allow 8080
+$ sudo ufw status
+````
+
+Note: If firewall not active then
+````
+$ sudo ufw allow OpenSSH
+$ sudo ufw enable
+````
+
+Make note of the initial administrator password
+````
+$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+````
+
+Use Jenkins web interface by opening a webbrowser in Ubuntu and navigate to http://localhost:8080:
+
+1. In the Unlock Jenkins screen enter the password from the previous step
+
+2. Click on "Install suggested plugins"
+
+3. Enter the first admin user and follow next steps, then it's done
 
