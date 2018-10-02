@@ -87,6 +87,8 @@ Close terminal and open again and then to check if everything is set up correctl
 $ tns doctor
 ````
 
+If there's EACCES permission errors then try uninstalling and reinstalling
+Uninstall is `$ sudo npm uninstall -g nativescript`
 
 ## Angular CLI
 
