@@ -215,7 +215,7 @@ $ sudo ufw allow OpenSSH
 $ sudo ufw enable
 ````
 
-Make note of the initial administrator password
+Display the initial admin password. You will need this for the next step
 ````
 $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ````
