@@ -70,6 +70,24 @@ A list of node version will display. Make a note of the current LTS version eg. 
 Install that version by running `$ nvm install [version]` eg: `$ nvm install 8.12.0`
 
 
+## NativeScript
+
+To use [NativeScript](https://www.nativescript.org) for native mobile development.
+
+Note: Adapted from set up instructions for Linux at [NativeScript](https://docs.nativescript.org/start/ns-setup-linux)
+
+Install nativescript
+````
+$ sudo npm install nativescript -g --unsafe-perm
+````
+Note: At time of writing the NativeScript docs indicate using `sudo npm` for the install but after research and because we are using nvm as a node version manager, we should use it without sudo. This is more secure.
+
+Close terminal and open again and then to check if everything is set up correctly
+````
+$ tns doctor
+````
+
+
 ## Angular CLI
 
 Install the Angular cli
@@ -77,6 +95,7 @@ Install the Angular cli
     $ sudo npm install -g @angular/cli
     
 Note: might have to use sudo if permission errors    
+
 
 ## Typescript?
 
@@ -158,19 +177,8 @@ $ sudo apt-get install g++
 ````
 
 
-## NativeScript
+## NativeScript Test
 
-To use [NativeScript](https://www.nativescript.org) for native mobile development.
-
-Note: Adapted from set up instructions for Linux at [NativeScript](https://docs.nativescript.org/start/ns-setup-linux)
-
-Install nativescript
-````
-$ sudo npm install nativescript -g --unsafe-perm
-````
-Note: At time of writing the NativeScript docs indicate using `sudo npm` for the install but after research and because we are using nvm as a node version manager, we should use it without sudo. This is more secure.
-
-Close terminal and open again and then to check if everything is set up correctly
 ````
 $ tns doctor
 ````
