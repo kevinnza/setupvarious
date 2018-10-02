@@ -99,23 +99,9 @@ Install the Angular cli
 Note: might have to use sudo if permission errors    
 
 
-## Typescript?
-
 ## Docker
 
 
-## .NET Core
-
-
-````
-$ wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
-$ sudo dpkg -i packages-microsoft-prod.deb
-$ sudo apt-get install apt-transport-https
-$ sudo apt-get update
-$ sudo apt-get install dotnet-sdk-2.1
-````
-
-Note: These instructions are from the Microsoft [site](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-current). If these don't work due to them changing it then please refer to the site and locate the instruction for Ubuntu 18.04
 
 ## Java
 
@@ -183,6 +169,20 @@ Install g++ compiler
 ````
 $ sudo apt-get install g++
 ````
+
+
+## .NET Core
+
+
+````
+$ wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+$ sudo dpkg -i packages-microsoft-prod.deb
+$ sudo apt-get install apt-transport-https
+$ sudo apt-get update
+$ sudo apt-get install dotnet-sdk-2.1
+````
+
+Note: These instructions are from the Microsoft [site](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-current). If these don't work due to them changing it then please refer to the site and locate the instruction for Ubuntu 18.04
 
 
 ## NativeScript Test
