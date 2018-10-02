@@ -173,6 +173,12 @@ If you encounter an error showing "Unable to locate package lib32bz2-1.0" then u
 $ sudo apt-get install lib32z1 lib32ncurses5 libbz2-1.0:i386 libstdc++6:i386
 ````
 
+If you STILL have errors then try running this and repeat the step again
+````
+sudo dpkg --add-architecture i386
+sudo apt-get update
+````
+
 Install g++ compiler
 ````
 $ sudo apt-get install g++
