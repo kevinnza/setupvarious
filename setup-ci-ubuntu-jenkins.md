@@ -92,10 +92,6 @@ $ tns doctor
 If there's EACCES permission errors then try uninstalling and reinstalling
 Uninstall is `$ sudo npm uninstall -g nativescript`
 
-If there's still issues about issues with the Android SDK then install Open JDK as well:
-````
-sudo apt-get install openjdk-8-jre
-````
 
 ## Angular CLI
 
@@ -178,8 +174,19 @@ $ sudo apt-get install g++
 ````
 
 
-## .NET Core
+## NativeScript Test
 
+````
+$ tns doctor
+````
+
+If there's still issues about issues with the Android SDK then install Open JDK as well:
+````
+sudo apt-get install openjdk-8-jre
+````
+
+
+## .NET Core
 
 ````
 $ wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
@@ -191,12 +198,6 @@ $ sudo apt-get install dotnet-sdk-2.1
 
 Note: These instructions are from the Microsoft [site](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-current). If these don't work due to them changing it then please refer to the site and locate the instruction for Ubuntu 18.04
 
-
-## NativeScript Test
-
-````
-$ tns doctor
-````
 
 
 ## Jenkins
