@@ -2,6 +2,8 @@
 
 Here we describe how to set up Ubuntu 18.04 for CI using Jenkins
 
+Note:
+If some of the apt install commands which prompt with a Y/N automatically abort then add the -y flag to force a Yes
 
 ## git
 
