@@ -90,6 +90,11 @@ $ tns doctor
 If there's EACCES permission errors then try uninstalling and reinstalling
 Uninstall is `$ sudo npm uninstall -g nativescript`
 
+If there's still issues about issues with the Android SDK then install Open JDK as well:
+````
+sudo apt-get install openjdk-8-jre
+````
+
 ## Angular CLI
 
 Install the Angular cli
