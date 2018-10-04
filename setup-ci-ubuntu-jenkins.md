@@ -102,6 +102,11 @@ Install the Angular cli
 Note: might have to use sudo if permission errors    
 
 
+#NativeScript Schematics
+
+`npm i -g @nativescript/schematics`
+
+
 ## Docker
 
 
