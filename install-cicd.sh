@@ -51,7 +51,7 @@ echo "************************"
 echo ""
 
 cd ~
-curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
+curl -sL https://deb.nodesource.com//setup_8.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
 sudo apt install nodejs -y
 sudo apt install build-essential -y
@@ -107,8 +107,46 @@ sudo apt install unzip -y
 unzip $ANDROID_SDK_ZIP_FILE -d $HOME/Android/Sdk
 # Set ANDROID_HOME system environment variables by creating a new .sh file in /etc/profile.d:
 sudo bash -c "echo -e \"export ANDROID_HOME=$HOME/Android/Sdk\nexport PATH=$PATH:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/platform-tools \" > /etc/profile.d/android-sdk-path.sh"
+# export the android variables for the rest of this session as they wouldn't take effect unless we log out and back in
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/platform-tools
 # download the Android sdks required for NativeScript
 echo y | sudo $HOME/Android/Sdk/tools/bin/sdkmanager "tools" "emulator" "platform-tools" "platforms;android-25" "build-tools;27.0.3" "extras;android;m2repository" "extras;google;m2repository"
+
+
+
+# set up additional stuff for Android/Nativescript to work
+echo ""
+echo "***************************************************"
+echo "*  Adding support for Android/Nativescript stuff  *"
+echo "***************************************************"
+echo ""
+
+sudo dpkg --add-architecture i386
+sudo apt-get update -y
+sudo apt-get install lib32z1 lib32ncurses5 libbz2-1.0:i386 libstdc++6:i386 -y
+sudo apt-get install g++ -y
+
+
+
+# Install Angular CLI
+echo ""
+echo "****************************"
+echo "*  Installing Angular CLI  *"
+echo "****************************"
+echo ""
+sudo npm install -g @angular/cli
+
+
+
+# Install Nativescript
+echo ""
+echo "*****************************"
+echo "*  Installing Nativescript  *"
+echo "*****************************"
+echo ""
+echo "n\nn"sudo npm install nativescript -g --unsafe-perm
+sudo npm i -g @nativescript/schematics
 
 
 
@@ -127,39 +165,47 @@ sudo systemctl start jenkins
 
 
 
+# Set up firewall
+echo ""
+echo "*************************"
+echo "*  Setting up firewall  *"
+echo "*************************"
+echo ""
+
 # enabled firewall in case it is not enabled
 echo "Enabling the firewall in case it is not enabled"
-
 echo y | sudo ufw enable
-
-
 
 # open port 8080 Jenkins
 echo "Opening port 8080 on firewall for Jenkins"
-
 sudo ufw allow OpenSSH
-
-
 
 # open port for SSH just in case we have just enabled the firewall
 echo "Opening port for open SSH just in case we have just enabled the firewall"
-
 sudo ufw allow 8080
 
 
 
-# wait for a bit
+# wait for a bit in case Jenkins is stil busy setting up admin password
+echo ""
+echo "********************************************************************"
+echo "*  Almost done, just waiting for a bit to let changes take effect  *"
+echo "********************************************************************"
+echo ""
 sleep 5
 
 
 
 # show the initial admin password
 echo ""
-echo "*************************************************************************************"
-echo "Jenkins has been installed - please do the following:"
-echo "1. Open a browser tab on your machine and navigate to http://[vps_ip_address]:8080"
-echo "2. When prompted for the initial admin password please enter this:"
-sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-echo "*************************************************************************************"
+echo "****************************************************************************************"
+echo "*  SETUP COMPLETE"
+echo "*"
+echo "*  Jenkins has been installed - please do the following:"
+echo "*  1. Open a browser tab on your machine and navigate to http://[vps_ip_address]:8080"
+echo "*  2. When prompted for the initial admin password please enter this:"
+echo "*  " && sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+echo "*"
+echo "***************************************************************************************"
 
 
