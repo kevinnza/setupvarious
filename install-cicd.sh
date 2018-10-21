@@ -202,7 +202,7 @@ sleep 5
 # show the initial admin password
 echo ""
 echo "****************************************************************************************"
-echo "*  SETUP COMPLETE"
+echo "*  SETUP COMPLETE!"
 echo "*"
 echo "*  Jenkins has been installed - please do the following:"
 echo "*  1. Open a browser tab on your machine and navigate to http://[vps_ip_address]:8080"
