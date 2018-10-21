@@ -103,6 +103,7 @@ ANDROID_SDK_DOWNLOAD_URI="https://dl.google.com/android/repository/sdk-tools-lin
 ANDROID_SDK_ZIP_FILE="sdk-tools-linux-4333796.zip"
 wget $ANDROID_SDK_DOWNLOAD_URI
 mkdir $HOME/Android && mkdir $HOME/Android/Sdk
+sudo apt install unzip -y
 unzip $ANDROID_SDK_ZIP_FILE -d $HOME/Android/Sdk
 # Set ANDROID_HOME system environment variables by creating a new .sh file in /etc/profile.d:
 sudo bash -c "echo -e \"export ANDROID_HOME=$HOME/Android/Sdk\nexport PATH=$PATH:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/platform-tools \" > /etc/profile.d/android-sdk-path.sh"
