@@ -9,7 +9,9 @@ sudo apt install curl -y
 
 
 # install Git
-echo "Installing Git"
+echo "********************"
+echo "*  Installing Git  *"
+echo "********************"
 
 sudo apt update -y
 sudo apt install git -y
@@ -17,7 +19,9 @@ sudo apt install git -y
 
 
 # install Docker
-echo "Installing Docker"
+echo "***********************"
+echo "*  Installing Docker  *"
+echo "***********************"
 
 sudo apt update -y
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
@@ -36,18 +40,22 @@ sudo usermod -aG docker ${USER}
 
 
 # install Node.js
-echo "Installing Node.js"
+echo "************************"
+echo "*  Installing Node.js  *"
+echo "************************"
 
 cd ~
 curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
-sudo bash nodesource_setup.sh
-sudo apt install nodejs
-sudo apt install build-essential
+sudo bash nodesource_setup.sh -y
+sudo apt install nodejs -y
+sudo apt install build-essential -y
 
 
 
 # install Java 
-echo "Installing Java Open JDK"
+echo "******************************"
+echo "*  Installing Java Open JDK  *"
+echo "******************************"
 
 sudo apt update -y
 sudo apt install openjdk-8-jdk -y

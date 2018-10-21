@@ -21,6 +21,11 @@ Access the VPS using ssh:
 ssh root@[ip address of your VPS] -i [path to your ssh key file]
 ````
 
+Set the root password:
+````
+passwd
+````
+
 Add a new user:
 
 ````
