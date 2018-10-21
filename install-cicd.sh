@@ -21,9 +21,15 @@ sudo ufw enable
 # open port 8080 Jenkins
 echo "Opening port 8080 on firewall for Jenkins"
 
-sudo ufw allow 8080
+sudo ufw allow 8080 -y
+
+# show the initial admin password
+echo ""
+echo ""
+echo "Jenkins has been installed - please do the following:"
+echo "1. Open a browser tab on your machine and navigate to http://[vps_ip_address]:8080"
+echo "2. When prompted for the initial admin password please enter this:"
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 
-# get the repository key
-# wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
 
