@@ -9,9 +9,11 @@ sudo apt install curl -y
 
 
 # install Git
+echo ""
 echo "********************"
 echo "*  Installing Git  *"
 echo "********************"
+echo ""
 
 sudo apt update -y
 sudo apt install git -y
@@ -19,9 +21,11 @@ sudo apt install git -y
 
 
 # install Docker
+echo ""
 echo "***********************"
 echo "*  Installing Docker  *"
 echo "***********************"
+echo ""
 
 sudo apt update -y
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
@@ -40,9 +44,11 @@ sudo usermod -aG docker ${USER}
 
 
 # install Node.js
+echo ""
 echo "************************"
 echo "*  Installing Node.js  *"
 echo "************************"
+echo ""
 
 cd ~
 curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
@@ -53,9 +59,11 @@ sudo apt install build-essential -y
 
 
 # install Java 
+echo ""
 echo "******************************"
 echo "*  Installing Java Open JDK  *"
 echo "******************************"
+echo ""
 
 sudo apt update -y
 sudo apt install openjdk-8-jdk -y
@@ -63,7 +71,11 @@ sudo apt install openjdk-8-jdk -y
 
 
 # install Jenkins
-echo "Installing Jenkins"
+echo ""
+echo "************************"
+echo "*  Installing Jenkins  *"
+echo "************************"
+echo ""
 
 wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
 sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
@@ -100,11 +112,11 @@ sleep 5
 
 # show the initial admin password
 echo ""
-echo ""
+echo "*************************************************************************************"
 echo "Jenkins has been installed - please do the following:"
 echo "1. Open a browser tab on your machine and navigate to http://[vps_ip_address]:8080"
 echo "2. When prompted for the initial admin password please enter this:"
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-
+echo "*************************************************************************************"
 
 
