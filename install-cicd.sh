@@ -145,7 +145,14 @@ echo "*****************************"
 echo "*  Installing Nativescript  *"
 echo "*****************************"
 echo ""
-echo "n\nn" | sudo npm install nativescript -g
+
+# install, then uninstall and then reinstall - this seems to be the only way to sort out weird permission issues when the Nativescript cli runs
+# TODO: need to look into this one again
+echo "n\nn" | sudo npm install nativescript -g --unsafe-perm
+sudo npm uninstall nativescript -g --unsafe-perm
+echo "n\nn" | sudo npm install nativescript -g --unsafe-perm
+
+# native schematics for angular
 sudo npm i -g @nativescript/schematics
 
 
