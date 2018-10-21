@@ -68,3 +68,5 @@ Click on "Install suggested plugins" and wait for plugins to install
 When prompted create your first user
 
 
+## Notes
+- If there's issues with Jenkins building using Nativescript CLI (tns) then ssh to VPS and `su jenkins` and run `tns doctor`.
