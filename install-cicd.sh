@@ -145,7 +145,7 @@ echo "*****************************"
 echo "*  Installing Nativescript  *"
 echo "*****************************"
 echo ""
-echo "n\nn" | sudo npm install nativescript -g --unsafe-perm
+echo "n\nn" | sudo npm install nativescript -g
 sudo npm i -g @nativescript/schematics
 
 
