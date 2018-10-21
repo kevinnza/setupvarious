@@ -1,16 +1,16 @@
 # install Java 
 echo "Installing Java Open JDK"
 
-sudo -y apt update
-sudo -y apt install openjdk-8-jdk
+sudo apt update -y
+sudo apt install openjdk-8-jdk -y
 
 # install Jenkins
 echo "Installing Jenkins"
 
 wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
 sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-sudo -y apt update
-sudo -y apt install jenkins
+sudo apt update
+sudo apt install jenkins -y
 sudo systemctl start jenkins
 
 # enabled firewall in case it is not enabled
