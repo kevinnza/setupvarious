@@ -51,3 +51,15 @@ Execute the script file:
 ````
 sudo bash install-cicd.sh
 ````
+
+## Log in to Jenkins and set up
+
+Navigate to http://[vps_ip_address]:8080
+
+Enter password that you obtained from running the previous script.
+
+Click on "Install suggested plugins" and wait for plugins to install
+
+When prompted create your first user
+
+
