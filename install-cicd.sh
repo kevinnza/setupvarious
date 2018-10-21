@@ -1,10 +1,10 @@
 # install Java 
-echo Installing Java (Open JDK)
+echo "Installing Java Open JDK"
 
 sudo apt update && sudo apt install openjdk-8-jdk
 
 # install Jenkins
-echo Installing Jenkins
+echo "Installing Jenkins"
 
 wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
 &&
@@ -17,12 +17,12 @@ sudo -y apt install jenkins
 sudo systemctl start jenkins
 
 # enabled firewall in case it is not enabled
-echo Enabling the firewall in case it is not enabled
+echo "Enabling the firewall in case it is not enabled"
 
 sudo ufw enable
 
 # open port 8080 Jenkins
-echo Opening port 8080 on firewall for Jenkins
+echo "Opening port 8080 on firewall for Jenkins"
 
 sudo ufw allow 8080
 
