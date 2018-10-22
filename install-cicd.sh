@@ -181,11 +181,11 @@ echo y | sudo ufw enable
 
 # open port 8080 Jenkins
 echo "Opening port 8080 on firewall for Jenkins"
-sudo ufw allow OpenSSH
+sudo ufw allow 8080
 
 # open port for SSH just in case we have just enabled the firewall
 echo "Opening port for open SSH just in case we have just enabled the firewall"
-sudo ufw allow 8080
+sudo ufw allow OpenSSH
 
 
 
