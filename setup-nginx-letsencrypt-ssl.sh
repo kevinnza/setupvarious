@@ -1,4 +1,4 @@
-INSTALL_SSL = true
+INSTALL_SSL=true
 
 while true; do
     echo "Please enter the domain name eg: example.com, subdomain.example.com, etc"

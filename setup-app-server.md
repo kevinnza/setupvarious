@@ -62,6 +62,13 @@ sudo bash install-app-server.sh
 
 ## Install LetsEncrypt SSL
 
+Make sure you are logged in as the user you created 
+
+Change current directory to the home directory:
+````
+cd ~
+````
+
 Get the script file:
 ````
 wget https://raw.githubusercontent.com/kevinnza/setupvarious/master/setup-nginx-letsencrypt-ssl.sh
