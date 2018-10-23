@@ -38,7 +38,7 @@ if [ $INSTALL_SSL = true ]; then
     done
 
 
-    if [ $INSTALL_SSL_WWW ]; then
+    if [ $INSTALL_SSL_WWW = true ]; then
         echo "Installing SSL for $DOMAIN_NAME and www.$DOMAIN_NAME"
     else
         echo "Installing SSL for $DOMAIN_NAME"
