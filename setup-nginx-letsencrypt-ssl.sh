@@ -55,7 +55,7 @@ if [ $INSTALL_SSL = true ]; then
     sudo add-apt-repository ppa:certbot/certbot -y
     sudo apt install python-certbot-nginx -y
 
-    if [ $INSTALL_SSL_WWW ]; then
+    if [ $INSTALL_SSL_WWW = true ]; then
         sudo certbot --nginx -d $DOMAIN_NAME -d www.$DOMAIN_NAME
     else
         sudo certbot --nginx -d $DOMAIN_NAME
