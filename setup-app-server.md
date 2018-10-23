@@ -60,3 +60,15 @@ Execute the script file:
 sudo bash install-app-server.sh
 ````
 
+## Install LetsEncrypt SSL
+
+Get the script file:
+````
+wget https://raw.githubusercontent.com/kevinnza/setupvarious/master/setup-nginx-letsencrypt-ssl.sh
+````
+
+Execute the script file:
+````
+sudo bash setup-nginx-letsencrypt-ssl.sh
+````
+
