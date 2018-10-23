@@ -43,7 +43,12 @@ su [the user name you created]
 Note: If you ever SSH in again rather use this user than root ie `ssh \[youruser\]@[vps ip address]`
 
 ## Install via script
-Make sure you are logged in as the user you created and in the home directory `cd ~`
+Make sure you are logged in as the user you created 
+
+Change current directory to the home directory:
+````
+cd ~
+````
 
 Get the script file:
 ````

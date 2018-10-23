@@ -70,67 +70,10 @@ echo "Enabling the firewall in case it is not enabled"
 echo y | sudo ufw enable
 
 # open ports
-echo "Opening port 8080 on firewall for Jenkins"
+echo "Opening ports"
 sudo ufw allow OpenSSH
 sudo ufw allow 80
 sudo ufw allow 443
-
-
-
-# Ask if installation of a free LetsEncrypt SSL certificate is required
-# This is useful for non-production servers where you don't have a SSL certificate
-while true; do
-    echo "Installation of required software is complete - would you like to install a LetsEncrypt SSL certificate? "
-    read -p "(Y/N)" yn
-    case $yn in
-        [Yy]* ) INSTALL_SSL=true; break;;
-        [Nn]* ) INSTALL_SSL=false; break;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
-
-if [ $INSTALL_SSL = true ]; then
-    while true; do
-        echo "Please enter the name of domain (leave out the www) eg: example.com"
-        read -p "domain: " DOMAIN_NAME
-
-        if [ "$DOMAIN_NAME" = "" ]; then
-            while true; do
-                read -p "You didn't enter a domain name. Do you still want to install the LetsEncrypt SSL certificate? (Y/N)" yn
-                case $yn in
-                    [Yy]* ) INSTALL_SSL=true; break;;
-                    [Nn]* ) INSTALL_SSL=false; break;;
-                    * ) echo "Please answer yes or no.";;
-                esac
-            done
-        fi
-
-        if [ "$DOMAIN_NAME" != "" ]; then
-            break;
-        fi
-
-        if [ $INSTALL_SSL = false ]; then
-            break;
-        fi                
-    done  
-
-    if [ $INSTALL_SSL = true ]; then
-        echo "Installing SSL for" $DOMAIN_NAME
-
-        # Set up LetsEncrypt
-        echo ""
-        echo "****************************"
-        echo "*  Setting up LetsEncrypt  *"
-        echo "****************************"
-        echo ""
-
-        sudo add-apt-repository ppa:certbot/certbot
-        sudo apt install python-certbot-nginx         
-
-        sudo certbot --nginx -d $DOMAIN_NAME -d www.$DOMAIN_NAME
-
-    fi
-fi
 
 
 
