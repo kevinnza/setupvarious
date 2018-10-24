@@ -52,12 +52,12 @@ cd ~
 
 Get the script file:
 ````
-wget https://raw.githubusercontent.com/kevinnza/setupvarious/master/install-app-server.sh
+wget https://raw.githubusercontent.com/kevinnza/setupvarious/master/install-appserver-ubuntu-18.04.sh
 ````
 
 Execute the script file:
 ````
-sudo bash install-app-server.sh
+sudo bash install-appserver-ubuntu-18.04.sh
 ````
 
 ## Install LetsEncrypt SSL

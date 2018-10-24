@@ -54,7 +54,7 @@ wget https://raw.githubusercontent.com/kevinnza/setupvarious/master/install-cicd
 
 Execute the script file:
 ````
-sudo bash install-cicd.sh
+sudo bash install-cicd-jenkins-ubuntu-18.04.sh
 ````
 
 ## Log in to Jenkins and set up

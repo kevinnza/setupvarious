@@ -169,8 +169,11 @@ sudo apt install code -y
 
 # Setup complete
 echo ""
-echo "********************"
-echo "*  SETUP COMPLETE! *"
-echo "********************"
+echo "**********************************************************************"
+echo "*  SETUP COMPLETE!                                                   *"
+echo "*                                                                    *"
+echo "*  Reboot your machine for all the necessary changes to take effect  *"
+echo "*                                                                    *"
+echo "**********************************************************************"
 
 
