@@ -1,12 +1,16 @@
 INSTALL_SSL=true
 
 while true; do
-    echo "Please enter the domain name eg: example.com, subdomain.example.com, etc"
-    read -p "domain: " DOMAIN_NAME
+    echo "This will set up a free LetsEncrypt SSL certificate for Nginx on this server"
+    echo "Please ensure that a Nginx server block exists for the domain that you are creating the SSL certificate for"
+    echo ""
+    echo "Please enter the domain name for which you wish to set up a LetsEncrypt SSL certificate"
+    echo "The domain should be eg: example.com, subdomain.example.com, etc"
+    read -p "Enter domain>" DOMAIN_NAME
 
     if [ "$DOMAIN_NAME" = "" ]; then
         while true; do
-            read -p "You didn't enter a domain name. Do you still want to install the LetsEncrypt SSL certificate? (Y/N)" yn
+            read -p "You didn't enter a domain name. Do you still want to set up the domain? (Y/N)" yn
             case $yn in
                 [Yy]* ) INSTALL_SSL=true; break;;
                 [Nn]* ) INSTALL_SSL=false; break;;

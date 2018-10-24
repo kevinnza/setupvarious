@@ -23,7 +23,8 @@ sudo apt update -y
 apt-cache policy docker-ce
 sudo apt install docker-ce -y
 
-
+# wait for a few moments in case docker group is not created yet
+sleep 5
 
 # add the current user to the docker group so we don't have to be logged on as root user or use sudo to use docker command
 # note: we may have to do the same for the jenkins user later on

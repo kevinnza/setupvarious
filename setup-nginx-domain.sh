@@ -1,7 +1,8 @@
 SETUP_DOMAIN=true
 
 while true; do
-    echo "Please enter the name of domain to set up on this server (leave out the www) eg: example.com"
+    echo "This will set up a server block for a domain you specify"
+    echo "Please enter the name of domain to set up on Nginx for this server (leave out the www) eg: example.com"
     read -p "domain: " DOMAIN_NAME
 
     if [ "$DOMAIN_NAME" = "" ]; then
