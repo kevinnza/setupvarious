@@ -20,3 +20,4 @@ Execute the script file:
 sudo bash install-devenv-ubuntu-18.04.sh
 ````
 
+Once done, reboot the OS for changes to take effect properly
