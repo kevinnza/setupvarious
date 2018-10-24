@@ -49,7 +49,7 @@ Make sure you are logged in as the user you created and in the home directory `c
 
 Get the script file:
 ````
-wget https://raw.githubusercontent.com/kevinnza/setupvarious/master/install-cicd.sh
+wget https://raw.githubusercontent.com/kevinnza/setupvarious/master/install-cicd-jenkins-ubuntu-18.04.sh
 ````
 
 Execute the script file:
