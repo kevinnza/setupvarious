@@ -31,7 +31,7 @@ Run `tns doctor` to see if your environment is set up correctly for NativeScript
 
 ### Issues you may find
 
-
+During building if you see "Duplicate..." errors then make sure you are building using the --bundle option. If it's a code share project (web and mobile) then build with the --bundle
 
 
 
