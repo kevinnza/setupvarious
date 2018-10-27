@@ -12,6 +12,14 @@ If you see error like "" then goto File => Preferences => Settings. You should s
 Add this: 
 "javascript.implicitProjectConfig.experimentalDecorators": true
 
+If you want to debug a code share app using webpack then make sure to edit the launch.json file by:
+ - Click View => Debug
+ - Click the gear icon to display launch.json
+ - Locate the Attach on Android and Launch on Android items
+ - Add this property to each:
+   "tnsArgs":\["--bundle"\]
+   
+
 ## Code Sharing between Mobile and Web Applications
 
 To gain the maximum benefit of code reuse, set up a code sharing project which will cover web and mobile uis.
