@@ -118,7 +118,7 @@ sudo bash -c "echo -e \"export ANDROID_HOME=$HOME/Android/Sdk\nexport PATH=$PATH
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/platform-tools
 # download the Android sdks required for NativeScript
-echo y | sudo $HOME/Android/Sdk/tools/bin/sdkmanager "tools" "emulator" "platform-tools" "platforms;android-25" "build-tools;27.0.3" "extras;android;m2repository" "extras;google;m2repository"
+echo y | sudo $HOME/Android/Sdk/tools/bin/sdkmanager "tools" "emulator" "platform-tools" "platforms;android-25" "platforms;android-28" "build-tools;27.0.3" "extras;android;m2repository" "extras;google;m2repository"
 
 
 
