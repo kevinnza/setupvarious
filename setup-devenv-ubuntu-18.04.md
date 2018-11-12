@@ -22,6 +22,13 @@ sudo bash install-devenv-ubuntu-18.04.sh
 
 Once done, REBOOT the OS for changes to take effect properly
 
+Uninstall and then reinstall NativeScript to fix permission issues:
+````
+sudo npm uninstall nativescript -g --unsafe-perm
+
+sudo npm install nativescript -g --unsafe-perm
+````
+
 ## Running in a VirtualBox virtual machine
 
 If you are running your dev environment in VirtualBox then ensure that the VirtualBox Extension Pack and VirtualBox Guest Additions is installed.
