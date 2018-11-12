@@ -51,19 +51,19 @@ echo "************************"
 echo ""
 
 cd ~
-#curl -sL https://deb.nodesource.com//setup_8.x -o nodesource_setup.sh
-#sudo bash nodesource_setup.sh
-#sudo apt install nodejs -y
-#sudo apt install build-essential -y
+curl -sL https://deb.nodesource.com//setup_8.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt install nodejs -y
+sudo apt install build-essential -y
 
-curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh -o install_nvm.sh
-sudo bash install_nvm.sh
+#curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh -o install_nvm.sh
+#sudo bash install_nvm.sh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-nvm install 8.10.0
+#nvm install 8.10.0
 
 # install .NET Core
 echo ""
